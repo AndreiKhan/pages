@@ -472,6 +472,12 @@ input {
   .promo__text {
     margin-left: 40px;
   }
+  .promo__text__title {
+    font-size: 44px;
+  }
+  .promo__text__heading {
+    font-size: 24px;
+  }
   .sale {
     padding-left: 16px;
     padding-right: 16px;
