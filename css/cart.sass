@@ -1,0 +1,308 @@
+@import 'vars'
+
+.bread_crumb
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 148px
+    background-color: #F8F3F4
+
+    &__current
+        font-size: 24px
+        font-weight: 400
+        line-height: 29px
+        color: $colorSelectSite
+
+.cart
+    display: flex
+    gap: 128px
+    padding-top: 96px
+    padding-bottom: 128px
+
+    .price__color
+        color: $colorSelectSite
+
+    &_list
+        display: flex
+        flex-direction: column
+        gap: 72px
+
+        &_box
+            display: flex
+            flex-direction: column
+            gap: 40px
+
+            &_product
+                position: relative
+                display: flex
+                gap: 31px
+                width: 652px
+                height: 306px
+                box-shadow: 17px 19px 24px 0px #00000021
+
+                &__img
+                    width: 262px
+
+                &_description
+                    width: 211px
+                    padding-top: 22px
+                    display: flex
+                    flex-direction: column
+                    gap: 6px
+
+                    &__name
+                        padding-bottom: 42px
+                        color: #222
+                        font-size: 24px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: normal
+
+                    &__text
+                        color: #575757
+                        font-size: 22px
+                        font-style: normal
+                        font-weight: 400
+                        line-height: normal
+
+                    .product__quantity
+                        margin-left: 24px
+                        padding: 0px 16px
+                        border: 1px solid #EAEAEA
+
+                &__delete
+                    position: absolute
+                    right: 22px
+                    top: 28px
+
+                    &:hover
+                        cursor: pointer
+
+        &_redact
+            display: flex
+            justify-content: space-between
+
+            &__button
+                padding: 17px 40px
+                border: 1px solid #A4A4A4
+
+                color: $colortext
+                font-family: Lato
+                font-size: 14px
+                font-style: normal
+                font-weight: 300
+                line-height: normal
+                text-transform: uppercase
+                background-color: #FFF
+                transition: all 0.3s
+
+                &:hover
+                    background-color: $colorSelectSite
+                    color: #FFF
+                    border-color: $colorSelectSite
+
+    &_form
+        display: flex
+        flex-direction: column
+        gap: 57px
+
+        &_input
+            display: flex
+            flex-direction: column
+            gap: 20px
+            width: 360px
+
+            &__head
+                color: #222
+                font-size: 16px
+                font-style: normal
+                font-weight: 300
+                line-height: normal
+
+            &__address
+                color: #B1B1B1
+                font-size: 13px
+                font-style: normal
+                font-weight: 300
+                line-height: normal
+                padding: 13px 17px 16px
+                border: 1px solid #A4A4A4
+                border-radius: 0
+
+            &__submit
+                color: #4A4A4A
+                font-family: Lato
+                font-size: 11px
+                font-style: normal
+                font-weight: 300
+                line-height: normal
+                text-transform: uppercase
+                padding: 12px 0
+                width: 101px
+                border: 1px solid #A4A4A4
+                border-radius: 0
+                background-color: #FFF
+                transition: all 0.3s
+
+                &:hover
+                    background-color: $colorSelectSite
+                    color: #FFF
+                    border-color: $colorSelectSite
+
+        &_checkout
+            padding: 39px 43px 42px 44px
+            background-color: #F5F3F3
+            display: flex
+            flex-direction: column
+            gap: 17px
+            width: 360px
+            box-sizing: border-box
+
+            &_price
+                display: flex
+                flex-direction: column
+                align-items: flex-end
+                gap: 12px
+                padding-bottom: 21px
+                border-bottom: 1px solid #E2E2E2
+
+                &__subTotal
+                    color: #4A4A4A
+                    font-size: 11px
+                    font-style: normal
+                    font-weight: 400
+                    line-height: normal
+
+                &__grandTotal
+                    color: #222
+                    font-size: 16px
+                    font-style: normal
+                    font-weight: 300
+                    line-height: normal
+
+                    .price
+                        font-weight: 700
+
+                .price
+                    padding-left: 25px
+
+            &_submit
+                &__button
+                    color: #FFF
+                    font-family: Lato
+                    font-size: 16px
+                    font-style: normal
+                    font-weight: 300
+                    line-height: normal
+                    background-color: $colorSelectSite
+                    border: 1px solid $colorSelectSite
+                    width: 100%
+                    padding-top: 15px
+                    padding-bottom: 16px
+
+                    &:active
+                        filter: brightness(0.9)
+
+@media (max-width: 1139px)
+
+    .cart
+        padding-top: 59px
+        flex-direction: column
+        gap: 64px
+
+        &_list
+            gap: 62px
+
+            &_box_product
+                width: 734px
+
+                &_delete
+                    right: 24px
+
+            &_redact
+                justify-content: center
+                gap: 48px
+
+        &_form
+            flex-direction: row
+            gap: 15px
+
+            &_checkout
+                margin-top: 39px
+                height: 214px
+
+@media (max-width: 767px)
+
+    .bread_crumb
+        flex-direction: column
+        justify-content: center
+
+        &__current
+            margin-left: 0
+
+    .cart
+        gap: 48px
+        padding-top: 39px
+        padding-bottom: 96px
+
+        &_list
+            gap: 30px
+
+            &_box
+                gap: 32px
+
+                &_product
+                    width: 358px
+                    height: 188px
+                    gap: 17px
+
+                    &__img
+                        width: 144px
+                        height: 188px
+
+                    &_description
+                        width: 141px
+                        padding-top: 13px
+                        gap: 4px
+
+                        &__name
+                            padding-bottom: 26px
+                            font-size: 16px
+
+                        &__text
+                            font-size: 14px
+
+                        .product__quantity
+                            margin-left: 15px
+                            padding: 0px 9px
+                            font-size: 10px
+
+                    &__delete
+                        width: 10px
+                        height: 11px
+                        top: 17px
+                        right: 12px
+
+            &_redact
+                gap: 9px
+
+                &__button
+                    width: 175px
+                    padding: 9px 0px 10px
+                    color: #575757
+                    text-align: center
+                    font-size: 12px
+                    font-weight: 400
+                    text-transform: none
+
+        &_form
+            flex-direction: column
+            gap: 48px
+
+            &_input__submit
+                font-size: 11px
+                text-transform: none
+
+            &_checkout
+                margin-top: 0
+                height: 214px

@@ -1,0 +1,237 @@
+@import 'vars'
+
+summary
+    display: block
+
+summary::-webkit-details-marker
+    display: none
+
+.bread_crumb
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 148px
+    background-color: #F8F3F4
+
+    &__current
+        font-size: 24px
+        font-weight: 400
+        line-height: 29px
+        color: $colorSelectSite
+
+    &__list
+        display: flex
+        list-style-type: none
+
+        &__item
+
+            &:not(:last-child)::after
+                content: '/'
+                padding-left: 5px
+                padding-right: 5px
+                color: #636363
+                font-size: 14px
+                font-weight: 300
+                line-height: 17px
+
+            &:last-child &__link
+                font-size: 14px
+                font-weight: 700
+                line-height: 17px
+                color: $colorSelectSite
+
+            &__link
+                color: #636363
+                font-size: 14px
+                font-style: normal
+                font-weight: 300
+                line-height: 17px
+                transition: color 0.3s
+
+                &:hover
+                    color: $colorSelectSite
+                    text-decoration: underline
+
+.showcase
+    position: relative
+
+    &_preview
+        height: 777px
+        background-color: #F7F7F7
+        border: 1px solid #EAEAEA
+        display: flex
+        align-items: center
+        justify-content: space-between
+
+        &__image
+            width: 597px
+
+        &__selector
+            padding: 13px 17px
+            background-color: #2A2A2A26
+
+            &:hover svg path
+                fill: $colorSelectSite
+
+    &_menu
+        margin-left: calc(50% - $widthSite / 2)
+        margin-right: calc(50% - $widthSite / 2)
+        background-color: $colorBackGroundMenu
+        border: 1px solid #EAEAEA
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-top: 65px
+        padding-bottom: 65px
+        transform: translateY(-65px)
+
+        &_description
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            &__subtitle
+                color: $colorSelectSite
+                font-size: 14px
+                font-weight: 300
+
+            &__line
+                width: 63px
+                height: 3px
+                background-color: $colorSelectSite
+                margin-top: 12px
+                margin-bottom: 12px
+
+            &__title
+                color: #4D4D4D
+                font-size: 18px
+                font-weight: 300
+                padding-bottom: 48px
+
+            &__text
+                color: #5E5E5E
+                text-align: center
+                font-size: 14px
+                font-weight: 300
+                width: 555px
+                padding-bottom: 32px
+
+            &__price
+                color: $colorSelectSite
+                font-size: 24px
+                font-weight: 300
+
+        &__line
+            border-bottom: 1px solid #EAEAEA
+            width: 641px
+            margin-top: 65px
+            margin-bottom: 65px
+
+        &_buttons
+            display: flex
+            flex-direction: column
+            align-items: center
+
+            &_options
+                display: flex
+                padding-bottom: 49px
+                gap: 23px
+
+                &__item
+                    &__summary
+                        display: flex
+                        gap: 9px
+                        align-items: center
+                        cursor: pointer
+
+                        &__heading
+                            color: #6F6E6E
+                            font-size: 14px
+                            font-style: normal
+                            font-weight: 400
+                            line-height: normal
+
+            &__add
+                display: flex
+                align-items: center
+                gap: 23px
+                color: $colorSelectSite
+                font-size: 16px
+                padding: 11px 24px
+                border: 1px solid $colorSelectSite
+                transition: all 0.3s
+
+                &:hover
+                    background-color: $colorSelectSite
+                    color: #FFFFFF
+
+                &:hover svg path
+                    fill: #FFFFFF
+
+.main_box
+    padding-top: 63px
+    padding-bottom: 128px
+
+@media (max-width: 1139px)
+
+    .showcase_preview
+        height: 624px
+
+        &__image
+            width: 466px
+
+    .main_box
+        &_product:nth-child(3)
+            display: none
+
+@media (max-width: 767px)
+
+    .bread_crumb
+        flex-direction: column
+        justify-content: space-evenly
+
+        &__current
+            margin-left: 0
+
+        &__list
+            margin-right: 0
+
+    .showcase
+        &_preview
+            position: relative
+            justify-content: center
+
+            &__image
+                width: 374px
+
+            &__selector
+                position: absolute
+
+                &_left
+                    left: 0
+
+                &_right
+                    right: 0
+
+        &_menu
+            &_description
+                &__text
+                    width: 326px
+
+            &__line
+                width: 175px
+
+            &_buttons
+                display: flex
+                flex-direction: column
+                align-items: center
+
+                &_options
+                    &__item
+                        &__summary
+                            &__heading
+                                font-size: 10px
+
+    .main_box
+        padding-top: 0px
+        padding-bottom: 64px

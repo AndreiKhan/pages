@@ -1,0 +1,153 @@
+@import 'vars'
+
+.bread_crumb
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: 148px
+    background-color: #F8F3F4
+
+    &__current
+        font-size: 24px
+        font-weight: 400
+        line-height: 29px
+        color: $colorSelectSite
+
+.profile
+    display: flex
+    padding-top: 64px
+    padding-bottom: 96px
+    gap: 128px
+
+    &_form
+        display: flex
+        flex-direction: column
+        width: 360px
+
+        &__head
+            color: #222
+            font-size: 16px
+            font-style: normal
+            font-weight: 300
+            line-height: normal
+
+        &__input
+            margin-top: 20px
+            color: #B1B1B1
+            font-size: 13px
+            font-style: normal
+            font-weight: 300
+            line-height: normal
+            padding: 13px 17px 16px
+            border: 1px solid #A4A4A4
+            border-radius: 0
+
+        &_sex
+            display: flex
+            align-items: center
+            padding-top: 31px
+            padding-bottom: 33px
+
+            &__label
+                color: #000
+                font-size: 11px
+                font-style: normal
+                font-weight: 300
+                line-height: normal
+                padding-left: 10px
+                padding-right: 20px
+
+        &__explanation
+            padding-top: 15px
+            padding-bottom: 39px
+            color: #B1B1B1
+            font-size: 13px
+            font-style: normal
+            font-weight: 300
+            line-height: normal
+
+        &__submit
+            display: flex
+            gap: 20px
+            align-items: center
+            width: 168px
+            padding: 16px 29px 17px
+            border: 1px solid $colorSelectSite
+            border-radius: 0
+            background-color: $colorSelectSite
+            color: #FFF
+            font-family: Lato
+            font-size: 14px
+            font-style: normal
+            font-weight: 400
+            line-height: normal
+
+            &:active
+                filter: brightness(0.9)
+
+    &_advantages
+        display: flex
+        flex-direction: column
+        gap: 22px
+        width: 652px
+
+        &__head
+            color: #000
+            font-size: 24px
+            font-style: normal
+            font-weight: 300
+            line-height: normal
+
+        &__text
+            color: #000
+            font-size: 24px
+            font-style: normal
+            font-weight: 300
+            line-height: normal
+
+        &__list
+            color: #000
+            font-size: 24px
+            font-style: normal
+            font-weight: 300
+            line-height: normal
+
+            &__item
+                display: flex
+                gap: 23px
+                margin-bottom: 16px
+                align-items: center
+
+@media (max-width: 1139px)
+    .profile
+        padding-top: 40px
+        gap: 22px
+
+        &_advantages
+            width: 354px
+
+            &__head
+                font-size: 16px
+                padding-bottom: 10px
+
+            &__text
+                font-size: 16px
+
+            &__list
+                font-size: 16px
+
+                &__item
+                    align-items: normal
+
+@media (max-width: 767px)
+
+    .bread_crumb
+        flex-direction: column
+        justify-content: center
+
+        &__current
+            margin-left: 0
+
+    .profile
+        flex-direction: column
+        gap: 40px
