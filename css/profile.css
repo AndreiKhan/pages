@@ -71,7 +71,7 @@
   content: "";
   display: inline-block;
   visibility: visible;
-  border: 2px solid white;
+  border: 1px solid #F16D7F;
 }
 .profile_form_sex__label {
   color: #000;
